@@ -1,0 +1,8 @@
+name: automatic-version-bump
+description: Automatically bump your package.json version following semver rules
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: arrow-up-circle
+  color: red

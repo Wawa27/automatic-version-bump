@@ -1,0 +1,44 @@
+{
+  "name": "automatic-version-bump",
+  "version": "1.0.0",
+  "description": "Automatically bump your package.json version following semver rules",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "ncc build ./src/index.ts --watch",
+    "build": "ncc build ./src/index.ts",
+    "run": "node ./dist/index.js",
+    "test": "mocha -r ts-node/register ./test/**/*.spec.ts",
+    "lint": "eslint . --ext .ts"
+  },
+  "keywords": [
+    "github",
+    "action",
+    "bump",
+    "version",
+    "semver"
+  ],
+  "author": "Wawa27",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/exec": "^1.0.4",
+    "@actions/github": "^4.0.0",
+    "edit-json-file": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/edit-json-file": "^1.4.0",
+    "@types/jest": "^26.0.20",
+    "@types/mocha": "^8.2.1",
+    "@types/node": "^14.14.31",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "chai": "^4.3.0",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "mocha": "^8.3.0",
+    "prettier": "2.2.1"
+  }
+}
