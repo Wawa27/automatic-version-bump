@@ -23,7 +23,8 @@
     "@actions/core": "^1.2.6",
     "@actions/exec": "^1.0.4",
     "@actions/github": "^4.0.0",
-    "edit-json-file": "^1.5.0"
+    "edit-json-file": "^1.5.0",
+    "ts-node": "^10.0.0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.15",
