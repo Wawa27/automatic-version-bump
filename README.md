@@ -3,6 +3,8 @@
 Automatically update a package.json version after a push. This action update the last pushed commit instead of creating
 a new commit.
 
+Requires NodeJS 15+
+
 ## How to use
 
 ### Unprotected branch
