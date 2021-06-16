@@ -12,6 +12,15 @@ describe('Pull request title', () => {
         );
     });
 
+    it('should return patch type (with scope)', () => {
+        assert.equal(
+            PackageUtils.getPullRequestTypeFromTitle(
+                'build(package): bump package from x.x to y.y'
+            ),
+            PullRequestType.PATCH
+        );
+    });
+
     it('should return minor type', () => {
         assert.equal(
             PackageUtils.getPullRequestTypeFromTitle('feat: '),
@@ -19,10 +28,10 @@ describe('Pull request title', () => {
         );
     });
 
-    it('should return minor type', () => {
+    it('should return patch type', () => {
         assert.equal(
             PackageUtils.getPullRequestTypeFromTitle('docs: '),
-            PullRequestType.MINOR
+            PullRequestType.PATCH
         );
     });
 
