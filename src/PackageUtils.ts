@@ -26,7 +26,7 @@ export default class PackageUtils {
         if (type.includes('!') || PackageUtils.majors.includes(type)) {
             return PullRequestType.MAJOR;
         }
-        if (PackageUtils.patches.includes(type)) {
+        if (PackageUtils.patches.find(patch => type.startsWith(patch))) {
             return PullRequestType.PATCH;
         }
         return PullRequestType.MINOR;
