@@ -1,6 +1,6 @@
 {
   "name": "automatic-version-bump",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Automatically bump your package.json version following semver rules",
   "main": "./dist/index.js",
   "scripts": {

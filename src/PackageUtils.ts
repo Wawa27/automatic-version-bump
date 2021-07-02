@@ -15,6 +15,10 @@ export default class PackageUtils {
         'fix'
     ];
 
+    public static minors = [
+        "feat"
+    ];
+
     public static majors: string[] = [];
 
     /**
@@ -26,10 +30,10 @@ export default class PackageUtils {
         if (type.includes('!') || PackageUtils.majors.includes(type)) {
             return PullRequestType.MAJOR;
         }
-        if (PackageUtils.patches.find(patch => type.startsWith(patch))) {
-            return PullRequestType.PATCH;
+        if (PackageUtils.minors.find(minor => type.startsWith(minor))) {
+            return PullRequestType.MINOR;
         }
-        return PullRequestType.MINOR;
+        return PullRequestType.PATCH;
     }
 
     /**
