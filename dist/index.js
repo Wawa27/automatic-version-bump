@@ -7715,10 +7715,10 @@ class PackageUtils {
         if (type.includes('!') || PackageUtils.majors.includes(type)) {
             return src_PullRequestType.MAJOR;
         }
-        if (PackageUtils.patches.find(patch => type.startsWith(patch))) {
-            return src_PullRequestType.PATCH;
+        if (PackageUtils.minors.find(minor => type.startsWith(minor))) {
+            return src_PullRequestType.MINOR;
         }
-        return src_PullRequestType.MINOR;
+        return src_PullRequestType.PATCH;
     }
     /**
      * Return an incremented version from a pull request type (patch, minor, major)
@@ -7753,6 +7753,9 @@ PackageUtils.patches = [
     'perf',
     'test',
     'fix'
+];
+PackageUtils.minors = [
+    "feat"
 ];
 PackageUtils.majors = [];
 
