@@ -7,7 +7,7 @@ Requires NodeJS 15+
 
 ## How to use
 
-### Unprotected branch
+### Unprotected branch 
 
 The following action will update your package.json on push on the dev branch:
 
@@ -27,7 +27,7 @@ The following action will update your package.json on push on the dev branch:
                     ref: ${{ github.ref }}
                     fetch-depth: 0
                 - name: "Bump version"
-                  uses: Wawa27/automatic-version-bump@master
+                  uses: Wawa27/automatic-version-bump@main
 
 ### Protected branch
 
@@ -52,5 +52,5 @@ right on the specified branch
                       token: ${{ secrets.TOKEN }}
                       fetch-depth: 0
                 - name: "Bump version"
-                  uses: Wawa27/automatic-version-bump@master
+                  uses: Wawa27/automatic-version-bump@main
 
